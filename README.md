@@ -2,6 +2,51 @@
 
 The workshop repo for **Evaluations with Phoenix 101** at AI Engineer NYC, October 2026.
 
+## Setup
+
+Do these first. They're the slow part.
+
+You need **Node 22.12 or later** (`node --version`) and an **Anthropic API key** from [platform.claude.com](https://platform.claude.com/settings/keys).
+
+**1. Install uv.** It's a fast Python package manager, and it's how we run Phoenix. You don't need Python installed: uv fetches its own.
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+(On Windows, or if that doesn't work, see [the uv docs](https://docs.astral.sh/uv/getting-started/installation/). If you'd rather use Docker, `docker compose up` replaces step 3.)
+
+**2. Get the repo and add your key.**
+
+```bash
+git clone https://github.com/seldo/aie-nyc
+cd aie-nyc
+npm install
+cp .env.example .env      # then paste your ANTHROPIC_API_KEY into .env
+```
+
+**3. Start Phoenix**, and leave it running. The first run downloads Phoenix, which takes a minute.
+
+```bash
+npm run phoenix
+```
+
+**4. In a second terminal, check everything works and load the example data.**
+
+```bash
+npm run check             # checks Node, Phoenix and your key, and sends a test trace
+npm run seed              # loads example traces and human labels
+```
+
+`npm run check` ends with a green tick when you're ready. Then open http://localhost:6006 to see Phoenix.
+
+**5. Install the Phoenix plugin or skill for your coding agent.** We use it later, for error analysis.
+
+- Claude Code: `claude plugin marketplace add Arize-ai/phoenix`, then `claude plugin install arize-phoenix@arize-phoenix`, then start a new Claude Code session
+- Anything else: `npx skills add Arize-ai/phoenix --skill phoenix-error-analysis`
+
+## What you'll do
+
 You'll build a small financial-analyst agent with the [Claude Agent SDK](https://platform.claude.com/docs/en/agent-sdk/overview), trace it with [Phoenix](https://arize.com/docs/phoenix), and then:
 
 1. read its traces, by hand and with your coding agent
@@ -11,36 +56,6 @@ You'll build a small financial-analyst agent with the [Claude Agent SDK](https:/
 5. check that judge against human labels
 6. run an experiment to prove a prompt change helped
 7. run all of it as a test suite with `npm test`
-
-## Setup
-
-You need:
-
-- **Node 22.12 or later** (`node --version`)
-- **uv**, which runs Phoenix for you. Install it with `curl -LsSf https://astral.sh/uv/install.sh | sh` (macOS/Linux) or see [the uv docs](https://docs.astral.sh/uv/getting-started/installation/). You don't need Python installed; uv fetches its own. If you'd rather use Docker, `docker compose up` works instead.
-- **An Anthropic API key** from [platform.claude.com](https://platform.claude.com/settings/keys)
-- **The Phoenix plugin or skill** for your coding agent (we use it for error analysis):
-  - Claude Code: `claude plugin marketplace add Arize-ai/phoenix`, then `claude plugin install arize-phoenix@arize-phoenix`
-  - Anything else: `npx skills add Arize-ai/phoenix --skill phoenix-error-analysis`
-
-Then:
-
-```bash
-git clone https://github.com/seldo/aie-nyc
-cd aie-nyc
-npm install
-cp .env.example .env      # and paste in your ANTHROPIC_API_KEY
-npm run phoenix           # first run downloads Phoenix; leave it running
-```
-
-In a second terminal:
-
-```bash
-npm run check             # checks Node, Phoenix and your key, and sends a test trace
-npm run seed              # loads example traces and human labels
-```
-
-Open http://localhost:6006 to see Phoenix.
 
 ## The steps
 
