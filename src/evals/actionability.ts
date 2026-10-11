@@ -3,7 +3,7 @@ import { judge, telemetry } from "./judge.js";
 
 // A custom LLM judge, in five parts:
 // 1. the judge's role, 2. explicit criteria, 3. labeled examples,
-// 4. the data, clearly marked, 5. a constrained answer.
+// 4. the data, marked with XML tags, 5. a constrained answer.
 // Make the criteria yours: what would make *you* act on one of these reports?
 export const ACTIONABILITY_TEMPLATE = `
 You are evaluating a financial report written by an AI research assistant.
@@ -37,13 +37,17 @@ Example of a NOT ACTIONABLE report:
 has seen significant growth in recent years driven by AI demand.
 Investors should consider various factors when making decisions."
 
-[BEGIN DATA]
-************
-User request: {{input}}
-************
-Financial report: {{output}}
-************
-[END DATA]
+<data>
+
+<request>
+{{input}}
+</request>
+
+<report>
+{{output}}
+</report>
+
+</data>
 
 Based on the criteria above, is this financial report ACTIONABLE or NOT ACTIONABLE?
 `;
