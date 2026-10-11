@@ -1,0 +1,130 @@
+[
+ {
+  "spanId": "84382d876cf1542f",
+  "name": "human_actionable",
+  "label": "not actionable",
+  "score": 0,
+  "explanation": "TSLA growth: 'growth story intact but maturing'; no recommendation.",
+  "annotatorKind": "HUMAN"
+ },
+ {
+  "spanId": "bf23f69cf5fe6145",
+  "name": "human_actionable",
+  "label": "not actionable",
+  "score": 0,
+  "explanation": "AAPL: 'compelling for long-term investors' but no call, price or risks with data.",
+  "annotatorKind": "HUMAN"
+ },
+ {
+  "spanId": "7a23433844f27566",
+  "name": "human_actionable",
+  "label": "not actionable",
+  "score": 0,
+  "explanation": "AMZN: a celebration of AWS with no recommendation.",
+  "annotatorKind": "HUMAN"
+ },
+ {
+  "spanId": "0e5193e10fe0af4b",
+  "name": "human_actionable",
+  "label": "actionable",
+  "score": 1,
+  "explanation": "MSFT: a clear BUY with reasons and a horizon, even though it names no risks.",
+  "annotatorKind": "HUMAN"
+ },
+ {
+  "spanId": "1f10e768f83e00ca",
+  "name": "human_actionable",
+  "label": "not actionable",
+  "score": 0,
+  "explanation": "NVDA AI chips: 'growth at a reasonable price' framing but no actual call.",
+  "annotatorKind": "HUMAN"
+ },
+ {
+  "spanId": "e2fb2410b406d312",
+  "name": "human_actionable",
+  "label": "not actionable",
+  "score": 0,
+  "explanation": "GOOGL: 'investors should monitor'; no recommendation.",
+  "annotatorKind": "HUMAN"
+ },
+ {
+  "spanId": "e83594c19e89b802",
+  "name": "human_actionable",
+  "label": "not actionable",
+  "score": 0,
+  "explanation": "TSLA deliveries: 'monitor Q3 earnings'; no recommendation.",
+  "annotatorKind": "HUMAN"
+ },
+ {
+  "spanId": "3e0d1ffa34286e85",
+  "name": "human_actionable",
+  "label": "not actionable",
+  "score": 0,
+  "explanation": "META: monitoring points but no call.",
+  "annotatorKind": "HUMAN"
+ },
+ {
+  "spanId": "438a40b2c78470cb",
+  "name": "human_actionable",
+  "label": "not actionable",
+  "score": 0,
+  "explanation": "RIVN: liquidity assessment only; no recommendation.",
+  "annotatorKind": "HUMAN"
+ },
+ {
+  "spanId": "5a0cb9f3d764d78d",
+  "name": "human_actionable",
+  "label": "not actionable",
+  "score": 0,
+  "explanation": "KO: no explicit buy/hold/sell call or entry price; 'ideal for income portfolios' isn't a recommendation.",
+  "annotatorKind": "HUMAN"
+ },
+ {
+  "spanId": "7a35ea16e261f235",
+  "name": "human_actionable",
+  "label": "actionable",
+  "score": 1,
+  "explanation": "AAPL vs MSFT: BUY MSFT / HOLD AAPL with entry prices, targets and reasons.",
+  "annotatorKind": "HUMAN"
+ },
+ {
+  "spanId": "07214760892af38c",
+  "name": "human_actionable",
+  "label": "actionable",
+  "score": 1,
+  "explanation": "ZZZQ: says plainly the ticker doesn't exist and asks the reader to verify it.",
+  "annotatorKind": "HUMAN"
+ },
+ {
+  "spanId": "f6ff433eb11a8b3e",
+  "name": "human_actionable",
+  "label": "not actionable",
+  "score": 0,
+  "explanation": "JPM: 'fundamentals remain solid'; no recommendation or valuation.",
+  "annotatorKind": "HUMAN"
+ },
+ {
+  "spanId": "f4fd5b3a7896a98d",
+  "name": "human_actionable",
+  "label": "not actionable",
+  "score": 0,
+  "explanation": "NVDA competitive: only a 'risk level: moderate' rating; no recommendation.",
+  "annotatorKind": "HUMAN"
+ },
+ {
+  "spanId": "68539fbe5f44ce19",
+  "name": "human_actionable",
+  "label": "actionable",
+  "score": 1,
+  "explanation": "PLTR: 'HOLD / CAUTIOUS BUY at pullbacks', with bull/bear cases and valuation reasoning.",
+  "annotatorKind": "HUMAN"
+ },
+ {
+  "spanId": "8517d8d2e5ca8219",
+  "name": "human_actionable",
+  "label": "actionable",
+  "score": 1,
+  "explanation": "TSLA 'yo is it a buy rn': recommendation by investor profile, entry levels, stop loss, risks.",
+  "annotatorKind": "HUMAN"
+ }
+]

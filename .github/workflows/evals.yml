@@ -1,0 +1,25 @@
+# Run the eval suite whenever the agent or its prompts change.
+name: evals
+on:
+  pull_request:
+    paths: ["src/**", "evals/**", "data/**"]
+  workflow_dispatch:
+
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    services:
+      phoenix:
+        image: arizephoenix/phoenix:version-20.19.0
+        ports: ["6006:6006"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+        env:
+          PHOENIX_ENDPOINT: http://localhost:6006
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

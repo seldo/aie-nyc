@@ -1,0 +1,15 @@
+# Alternative to `npm run phoenix` if you'd rather use Docker than uv.
+#   docker compose up
+services:
+  phoenix:
+    image: arizephoenix/phoenix:version-20.19.0
+    ports:
+      - "6006:6006"
+    environment:
+      - PHOENIX_WORKING_DIR=/mnt/data
+      # Lets the playground and PXI use Claude.
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    volumes:
+      - phoenix-data:/mnt/data
+volumes:
+  phoenix-data:

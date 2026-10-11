@@ -1,0 +1,45 @@
+{
+  "name": "phoenix-101",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Evaluations with Phoenix 101: AI Engineer NYC workshop, October 2026",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "phoenix": "PHOENIX_WORKING_DIR=./.phoenix-data uvx arize-phoenix@20.19.0 serve",
+    "check": "tsx scripts/check.ts",
+    "seed": "tsx scripts/seed.ts",
+    "agent": "tsx scripts/agent.ts",
+    "batch": "tsx scripts/batch.ts",
+    "eval:code": "tsx scripts/eval-code.ts",
+    "eval:builtin": "tsx scripts/eval-builtin.ts",
+    "eval:tools": "tsx scripts/eval-tools.ts",
+    "eval:custom": "tsx scripts/eval-custom.ts",
+    "meta": "tsx scripts/meta-eval.ts",
+    "experiment": "tsx scripts/experiment.ts",
+    "eval:consistency": "tsx scripts/eval-consistency.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.2",
+    "vitest": "^5.0.3"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^4.0.71",
+    "@anthropic-ai/claude-agent-sdk": "^0.3.288",
+    "@arizeai/openinference-instrumentation-claude-agent-sdk": "^0.3.4",
+    "@arizeai/openinference-semantic-conventions": "^2.14.0",
+    "@arizeai/phoenix-client": "^7.16.0",
+    "@arizeai/phoenix-evals": "^2.6.0",
+    "@arizeai/phoenix-otel": "^2.2.0",
+    "@opentelemetry/api": "^1.9.1",
+    "ai": "^7.0.127",
+    "dotenv": "^18.0.5"
+  }
+}

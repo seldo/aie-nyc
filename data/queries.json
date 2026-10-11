@@ -1,0 +1,17 @@
+[
+  { "tickers": "AAPL", "focus": "revenue growth and the services business" },
+  { "tickers": "NVDA", "focus": "AI chip demand and valuation" },
+  { "tickers": "AMZN", "focus": "AWS performance and profitability" },
+  { "tickers": "GOOGL", "focus": "advertising revenue and AI strategy" },
+  { "tickers": "MSFT", "focus": "cloud computing growth" },
+  { "tickers": "META", "focus": "AI spending and ad revenue" },
+  { "tickers": "TSLA", "focus": "vehicle deliveries and margins" },
+  { "tickers": "RIVN", "focus": "financial health and cash runway" },
+  { "tickers": "AAPL, MSFT", "focus": "which is the better investment right now" },
+  { "tickers": "NVDA", "focus": "competitive landscape and market share" },
+  { "tickers": "KO", "focus": "dividend yield and stability" },
+  { "tickers": "JPM", "focus": "interest rate exposure and loan growth" },
+  { "tickers": "PLTR", "focus": "valuation compared to growth" },
+  { "tickers": "ZZZQ", "focus": "recent earnings" },
+  { "tickers": "TSLA", "focus": "yo is it a buy rn" }
+]
