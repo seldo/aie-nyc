@@ -42,8 +42,12 @@ await ensureDataset();
 
 const financialReport = createFinancialReport(PROMPTS);
 
+// e.g. "improved-prompts", or "improved-prompts-claude-haiku-5-5" with AGENT_MODEL set.
 const experimentName =
-  process.env.EXPERIMENT_NAME ?? (PROMPTS === IMPROVED_PROMPTS ? "improved-prompts" : "my-prompts");
+  process.env.EXPERIMENT_NAME ??
+  [PROMPTS === IMPROVED_PROMPTS ? "improved-prompts" : "my-prompts", process.env.AGENT_MODEL]
+    .filter(Boolean)
+    .join("-");
 
 await runExperiment({
   experimentName,
